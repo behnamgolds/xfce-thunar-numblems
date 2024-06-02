@@ -1,13 +1,15 @@
 #!/usr/bin/python
 
-'''https://lazka.github.io/pgi-docs/'''
+# https://lazka.github.io/pgi-docs
+# pip install pgi
 from gi.repository import Gio
 
 import re
 import sys
 import os
 
-'''https://github.com/moses-palmer/pynput'''
+# https://github.com/moses-palmer/pynput
+# pip install pynput
 from pynput.keyboard import Key, Controller
 
 
