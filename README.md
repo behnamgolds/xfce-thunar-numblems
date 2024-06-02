@@ -32,7 +32,7 @@ I used some svg emblems and put it into my icons directory here :
 ~/.icons/Papirus-Dark/symbolic/emblems/
 ```
 There are 19 [1..19] svgs since that is what I needed .
-The script will clear the emblem if the number goes out of ragnge .
+The script will clear the emblem if the number goes out of range .
 I included them in the emblems/ directory in this repo .
 Also the source is mentioned there in emblems/source.txt .
 "Papirus-Dark" is the name of the theme I use, you should change

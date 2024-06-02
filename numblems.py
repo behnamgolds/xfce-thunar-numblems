@@ -1,7 +1,8 @@
 #!/usr/bin/python
 
 # https://lazka.github.io/pgi-docs
-# pip install pgi
+# pip install PyGObject
+# pacman -Syu python-gobject
 from gi.repository import Gio
 
 import re
