@@ -1,6 +1,11 @@
 # xfce-thunar-numblems
 XFCE Thunar File manager Custom Action for number emblems
 
+![2](https://github.com/behnamgolds/xfce-thunar-numblems/assets/29102609/b7fa3279-d2b2-4b56-9b90-d80f080537aa)
+
+![1](https://github.com/behnamgolds/xfce-thunar-numblems/assets/29102609/d28dbfb5-1e21-4536-b536-24476e55b2d3)
+
+
 I just wanted to add some actions to my thunar custom actions ,
 so that I could mark some files/directories with a number and
 easily increase or decrease the number .
