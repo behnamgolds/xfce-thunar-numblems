@@ -11,7 +11,11 @@ This was intended to be used as thunar custom action, but it
 could be used on its own like this :
 
 ```
-$ numblems <file-or-directory-path> <inc|dec>
+$ python numblems.py <file-or-directory-path> <inc|dec>
+```
+or
+```
+$ ./numblems.py <file-or-directory-path> <inc|dec>
 ```
 But you have to refresh(F5) your thunar window manually.
 If used as thunar custom action it will automatically send
