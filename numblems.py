@@ -37,39 +37,35 @@ def main(target_file, act):
         set_emblems(emblems)
 
     def set_emblems(embs):
-        testfile_info.set_attribute_stringv("metadata::emblems", embs)
-        testfile.set_attributes_from_info(testfile_info, 0)
+        file_info.set_attribute_stringv("metadata::emblems", embs)
+        file.set_attributes_from_info(file_info, 0)
         refresh_window()
 
     num_emblem_regex = re.compile("^emblem-num-[0-9]+-symbolic$")
-    testfile = Gio.file_new_for_path(target_file)
-    testfile_info = testfile.query_info('metadata::emblems', 0)
-    emblems = testfile_info.get_attribute_stringv("metadata::emblems")
+    file = Gio.file_new_for_path(target_file)
+    file_info = file.query_info('metadata::emblems', 0)
+    emblems = file_info.get_attribute_stringv("metadata::emblems")
     num_emblem_found = False
-    '''if testfile_info is None:'''
-    if len(emblems) == 0:
-        print("No emblems, set one if needed (on increase command)")
-        #exit()
-    else:
-        for i in range(0, len(emblems)):
-            if num_emblem_regex.match(emblems[i]):
-                num_emblem_found = True
-                num = int(emblems[i].split("-")[2])
 
-                if is_increase(act):
-                    num = increase_num(num)
-                else:
-                    num = decrease_num(num)
+    for i in range(0, len(emblems)):
+        if num_emblem_regex.match(emblems[i]):
+            num_emblem_found = True
+            num = int(emblems[i].split("-")[2])
 
-                if num == -1:
-                    emblems.pop(i)
-                    set_emblems(emblems)
-                    exit()
-                else:
-                    new_num_emblem = "emblem-num-" + str(num) + "-symbolic"
-                    emblems[i] = new_num_emblem
-                    set_emblems(emblems)
-                    exit()
+            if is_increase(act):
+                num = increase_num(num)
+            else:
+                num = decrease_num(num)
+
+            if num == -1:
+                emblems.pop(i)
+                set_emblems(emblems)
+                exit()
+            else:
+                new_num_emblem = "emblem-num-" + str(num) + "-symbolic"
+                emblems[i] = new_num_emblem
+                set_emblems(emblems)
+                exit()
 
     if not num_emblem_found:
         # print("No num emblem, set 1")
