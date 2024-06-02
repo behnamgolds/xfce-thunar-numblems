@@ -57,6 +57,7 @@ The changes will be saved here :
 ```
 The changes related to numblems for my config will be saved like this :
 ```
+</actions>
 <action>
 	<icon>list-add</icon>
 	<name>Inc Num</name>
