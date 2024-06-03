@@ -1,6 +1,8 @@
 # xfce-thunar-numblems
 XFCE Thunar File manager Custom Action for number emblems
 
+(( There is an updated version with more features [embleman](https://github.com/behnamgolds/embleman) ))
+
 ![2](https://github.com/behnamgolds/xfce-thunar-numblems/assets/29102609/b7fa3279-d2b2-4b56-9b90-d80f080537aa)
 
 I just wanted to add some actions to my thunar custom actions ,
@@ -10,12 +12,12 @@ easily increase or decrease the number .
 This was intended to be used as thunar custom action, but it
 could be used on its own like this :
 
-```
-$ python numblems.py <file-or-directory-path> <inc|dec>
+```bash
+python numblems.py <file-or-directory-path> <inc|dec>
 ```
 or
-```
-$ ./numblems.py <file-or-directory-path> <inc|dec>
+```bash
+./numblems.py <file-or-directory-path> <inc|dec>
 ```
 But you have to refresh(F5) your thunar window manually.
 If used as thunar custom action it will automatically send
@@ -23,8 +25,8 @@ the F5 key to the active window(aka thunar)
 
 You could also use it in other scripts and just run something
 like the following to send F5 to the active window :
-```
-$ xdotool key F5
+```bash
+xdotool key F5
 ```
 
 I used some svg emblems and put it into my icons directory here :
