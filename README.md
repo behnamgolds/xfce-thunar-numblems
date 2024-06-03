@@ -62,7 +62,7 @@ The changes will be saved here :
 ~/.config/Thunar/uca.xml
 ```
 The changes related to numblems for my config will be saved like this :
-```
+```xml
 </actions>
 <action>
 	<icon>list-add</icon>
